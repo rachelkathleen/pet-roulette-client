@@ -6,4 +6,4 @@ function petReducer(state = {pets: []}, action) {
     }
   }
   
-  export default postReducer;
+  export default petReducer;
