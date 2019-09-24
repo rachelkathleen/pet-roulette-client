@@ -5,5 +5,5 @@ function petReducer(state = {pets: []}, action) {
         return state;
     }
   }
-  
+
   export default petReducer;
