@@ -2,17 +2,24 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 class PetContainer extends React.Component {
-
- 
-
   render() {
-      return (
-          <div>
-            will render random pet, button to shuffle pet, and button to open form
-          </div>
-      )
+    if (this.props.pets.length === 0) {
+      return <p>Loading...</p>;
+    }
+    return (
+      <div>
+        <h1>Pets List</h1>
+        something
+      </div>
+    );
   }
-
 }
 
-export default PetContainer;
+
+const mapStateToProps = state => {
+  return {
+    pets: state
+  };
+};
+
+export default connect(mapStateToProps)(PetContainer);

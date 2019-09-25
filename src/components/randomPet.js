@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from "react-redux";
-import { getPets } from "./redux/actions/pets";
+import { fetchPets } from "../redux/actions/pets";
 
-class randomPet extends Component {
+class showPet extends Component {
     render() {
         return (
             <div>
@@ -12,4 +12,4 @@ class randomPet extends Component {
     }
 }
 
-export default connect (null, { getPets })(randomPet)
+export default connect (null, { fetchPets })(showPet)

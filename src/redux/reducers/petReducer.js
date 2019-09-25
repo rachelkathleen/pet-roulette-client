@@ -1,9 +1,8 @@
-function petReducer(state = {pets: []}, action) {
-    switch(action.type) {
-    
-      default:
-        return state;
-    }
+export default (state = [], action) => {
+  switch (action.type) {
+    case "RANDOM_PET_SUCCESS":
+      return action.pet;
+    default:
+      return state;
   }
-
-  export default petReducer;
+};

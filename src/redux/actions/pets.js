@@ -1,14 +1,22 @@
 import client from '../../petfinderConfig';
+
+const displayPet = pet => {
+    return {
+      type: "RANDOM_PET_SUCCESS",
+      pet
+    };
+  };
   
-  export const getPets = () => { debugger
+export const fetchPets = () => { 
+    let randomPetIndex = Math.floor(Math.random() * 100)
     return dispatch => {
-      return client.animal.search({ type: "dog" })
-        .then(resp => {
-            console.log("something")
+      return client.animal.search({ limit: 100 })
+        .then(resp => { debugger
+            const randomPet = resp.data.animals[randomPetIndex]
+            return randomPet
         })
     };
   };
 
 
-  
   
