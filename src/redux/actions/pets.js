@@ -1,5 +1,6 @@
 import client from '../../petfinderConfig';
 
+
 const displayPet = pet => {
     return {
       type: "RANDOM_PET_SUCCESS",
@@ -14,9 +15,16 @@ export const fetchPets = () => {
         .then(resp => { debugger
             const randomPet = resp.data.animals[randomPetIndex]
             return randomPet
+            let totalCount = resp.data.pagination.total_count
+            let firstID = resp.data.animals[0].id
+
         })
     };
   };
+
+// shuffle pet
+// send pet
+// validate pet
 
 
   
