@@ -8,23 +8,18 @@ const displayPet = pet => {
     };
   };
   
-export const fetchPets = () => { 
+  export const fetchRandomPet = () => { 
     let randomPetIndex = Math.floor(Math.random() * 100)
     return dispatch => {
       return client.animal.search({ limit: 100 })
-        .then(resp => { debugger
+        .then(resp => {
             const randomPet = resp.data.animals[randomPetIndex]
+            debugger
             return randomPet
-            let totalCount = resp.data.pagination.total_count
-            let firstID = resp.data.animals[0].id
-
         })
     };
   };
-
-// shuffle pet
-// send pet
-// validate pet
-
+  
+//   randomPet.photos[0].medium
 
   

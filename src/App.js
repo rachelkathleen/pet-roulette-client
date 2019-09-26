@@ -4,12 +4,13 @@ import { connect } from 'react-redux';
 import PetContainer from './containers/PetContainer'
 import logo from './logo.svg';
 import './App.css';
-import { fetchPets } from "./redux/actions/pets";
+// import { randomPet } from "./redux/actions/pets";
+import { fetchRandomPet } from "./redux/actions/pets";
 import thunk from "redux-thunk";
 
 class App extends React.Component {
   componentDidMount() {
-    this.props.fetchPets();
+    this.props.fetchRandomPet();
   }
   render() {
     return (
@@ -22,5 +23,5 @@ class App extends React.Component {
 
 export default connect(
   null,
-  { fetchPets }
+  { fetchRandomPet }
 )(App);
