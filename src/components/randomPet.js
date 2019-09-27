@@ -3,23 +3,23 @@ import { connect } from "react-redux";
 import { fetchRandomPet } from "../redux/actions/pets";
 
 class RandomPet extends Component {
-    render() {
+    render() { debugger
         const { pet } = this.props;
       if (!pet) {
         return <p>Loading...</p>};
       return (
         <div>
-            <h1>Will be a pet!</h1>
-            <p>{pet.name}</p>            
+          <h1>Will be a pet!</h1>
+            
+                
         </div>
         )
     }
 }
 
-  const mapStateToProps = (state, props) => { debugger
-    const pet = fetchRandomPet
-    return {
-      pet,
+  const mapStateToProps = state => {
+    return { 
+      pet: state
     };
   };
 

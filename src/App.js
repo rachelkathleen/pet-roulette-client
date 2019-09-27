@@ -8,7 +8,7 @@ import { fetchRandomPet } from "./redux/actions/pets";
 import thunk from "redux-thunk";
 
 class App extends React.Component {
-  componentDidMount() { 
+  componentDidMount() {
     this.props.fetchRandomPet();
   }
   render() {
