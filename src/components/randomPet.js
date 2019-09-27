@@ -11,7 +11,7 @@ class RandomPet extends Component {
       }
       return (
         <div>
-          <h1>Will be a pet!</h1> 
+          <h1>This is a pet (yayyyyy!)</h1> 
             <p>{pet.name}</p>  
             <p>{pet.id}</p>  
         </div>
