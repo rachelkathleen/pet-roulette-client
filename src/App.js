@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 // import { BrowserRouter as Router, Route } from "react-router-dom";
 import RandomPet from './components/RandomPet'
 import './App.css';
-// import { randomPet } from "./redux/actions/pets";
 import { fetchRandomPet } from "./redux/actions/pets";
 import thunk from "redux-thunk";
 
