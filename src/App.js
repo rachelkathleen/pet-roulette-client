@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import RandomPet from './components/RandomPet'
 import './App.css';
 import { fetchRandomPet } from "./redux/actions/pets";
-import thunk from "redux-thunk";
 
 class App extends React.Component {
   componentDidMount() {
