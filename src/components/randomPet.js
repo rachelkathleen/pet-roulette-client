@@ -3,18 +3,23 @@ import { connect } from "react-redux";
 
 class RandomPet extends Component {
   render() { 
-      const pet = this.props.pet.petsReducer;
-      
+    const pet = this.props.pet.petsReducer;
+    debugger
+    if (pet !== []) {
+      return (
+        <div>
+          <h1>This is a pet (yayyyyy!)</h1> 
+            <p>{pet.name}</p>   
+            <img src={pet.photos[0].medium} alt=""/>
+             
+        </div>
+        )
+    }
+
     if (pet === []) {
         return <p>Loading...</p>;
     }
-    return (
-      <div>
-        <h1>This is a pet (yayyyyy!)</h1> 
-          <p>{pet.name}</p>  
-          <p>{pet.id}</p>  
-      </div>
-      )
+    
   }
 }
 
