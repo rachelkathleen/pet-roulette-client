@@ -5,21 +5,22 @@ class RandomPet extends Component {
   render() { 
     const pet = this.props.pet.petsReducer;
     debugger
-    if (pet !== []) {
+    if (pet.photos !== undefined) {
       return (
         <div>
           <h1>This is a pet (yayyyyy!)</h1> 
-            <p>{pet.name}</p>   
+            <p>{pet.name}</p>  
             <img src={pet.photos[0].medium} alt=""/>
+            <a href={pet.url}>Visit my Page</a>
              
         </div>
         )
     }
-
-    if (pet === []) {
-        return <p>Loading...</p>;
-    }
-    
+    if (pet.photos === undefined) {
+        return (
+          <img src="https://66.media.tumblr.com/tumblr_lztjlvnBoa1qcay1ao1_500.gif" alt=""/>
+        );
+    } 
   }
 }
 
