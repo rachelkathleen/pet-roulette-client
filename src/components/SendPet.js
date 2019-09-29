@@ -20,7 +20,7 @@ handleChange = event => {
      
 handleSubmit = event => {
     event.preventDefault();
-    this.props.createPin(this.state);
+    this.props.sendEmail(this.state);
   };
 
   render() {
