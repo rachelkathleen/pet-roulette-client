@@ -15,7 +15,7 @@ class RandomPet extends Component {
     <Container>
       <Row className="justify-content-md-center">
         <Col md="auto">
-          <Card border="dark" style={{ width: '25rem'}} alignment='center'>
+          <Card border="dark" style={{ width: '25rem'}}>
             <Card.Img variant="top" src={pet.photos[0].medium} />
             <Card.Body>
               <Card.Title>{pet.name}</Card.Title>
