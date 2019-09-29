@@ -6,7 +6,6 @@ import Box from '@material-ui/core/Box';
 class RandomPet extends Component {
   render() { 
     const pet = this.props.pet.petsReducer;
-    debugger
     if (pet.photos !== undefined) {
       return (
   <>
@@ -14,13 +13,13 @@ class RandomPet extends Component {
           <h1>{pet.name}</h1>  
             <img src={pet.photos[0].medium} alt="" />          
         </div>
-        <div class="row">
-          <div class="six columns"><a class="button" href={pet.url}>Visit me on Petfinder!</a></div>
+        <div className="row">
+          <div className="six columns"><a className="button" href={pet.url}>Visit me on Petfinder!</a></div>
          
         </div>
-        <div class="row">
+        <div className="row">
           
-          <div class="six columns"><a class="button" href={pet.url}>Share me!</a></div>
+          <div className="six columns"><a className="button" href={pet.url}>Share me!</a></div>
         </div>
 </>
 
