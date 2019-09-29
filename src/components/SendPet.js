@@ -1,28 +1,33 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
+import { sendEmail } from "../redux/actions/pets";
  
 class SendPet extends Component {
-  
-state = {
-    text: ''
-};
+    
+    state = {
+        sender_name: '',
+        sender_email: '',
+        reciepient_name: '',
+        recipient_email: '',
+        message: ''
+    };
      
 handleChange = event => {
     this.setState({
-        text: event.target.value
+        [event.target.name]: event.target.value
     });
 };
      
-handleSubmit = event => { debugger
+handleSubmit = event => {
     event.preventDefault();
-        this.props.sendPet(this.state);
-};
+    this.props.createPin(this.state);
+  };
 
   render() {
     return(
       <div>
         <form onSubmit={ event => this.handleSubmit(event) }>
-          {/* <p>
+          <p>
             <label>Your Name:</label>
             <input type="text" onChange={(event) => this.handleChange(event)}/>
           </p>
@@ -37,7 +42,7 @@ handleSubmit = event => { debugger
           <p>
             <label>Friend's Email</label>
             <input type="text"onChange={(event) => this.handleChange(event)} />
-          </p>*/}
+          </p>
           <p> 
             <label>Message</label>
             <input type="textarea" onChange={(event) => this.handleChange(event)}/>
@@ -49,10 +54,4 @@ handleSubmit = event => { debugger
   }
 };
 
-const mapDispatchToProps = dispatch => {
-    return {
-      sendPet: formData => dispatch({ type: 'SEND_PET', payload: formData })
-    };
-  };
-  
-export default connect(null, mapDispatchToProps)(SendPet);
+export default connect(null, { sendEmail })(SendPet);
