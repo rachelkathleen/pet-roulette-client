@@ -2,14 +2,17 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import { sendEmail } from "../redux/actions/pets";
  
-class SendPet extends Component {
+class SendPet extends Component { 
     
     state = {
-        sender_name: '',
-        sender_email: '',
-        reciepient_name: '',
-        recipient_email: '',
-        message: ''
+        senderName: '',
+        senderEmail: '',
+        reciepientName: '',
+        recipientEmail: '',
+        message: '',
+        petName: '',
+        petURL: '',
+        petPhoto: '',
     };
      
 handleChange = event => {
@@ -18,7 +21,7 @@ handleChange = event => {
     });
 };
      
-handleSubmit = event => {
+handleSubmit = event => { debugger
     event.preventDefault();
     this.props.sendEmail(this.state);
   };
