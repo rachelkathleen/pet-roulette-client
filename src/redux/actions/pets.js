@@ -17,7 +17,41 @@ export const fetchRandomPet = () => {
       }).then(pet => dispatch(displayPet(pet)));
   };
 };
-  
-//   randomPet.photos[0].medium
+
+const fetchPets = pets => {
+  return {
+    type: "FETCH_PETS_SUCCESS",
+    pets
+  };
+};
+
+export const getPets = () => {
+  return dispatch => {
+    return fetch(`http://localhost:3001/pets`)
+      .then(res => res.json())
+      .then(pets => dispatch(fetchPets(pets)));
+  };
+};
+
+export const sendEmail = petEmail => {
+  const emailToSend = { email: petEmail };
+  return dispatch => {
+    fetch(`http://localhost:3001/pets`, {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(emailToSend)
+    })
+      .then(res => res.json())
+      .then(pet =>
+        dispatch({
+          type: "SEND_PET",
+          payload: pet
+        })
+      );
+  };
+};
 
   
