@@ -1,33 +1,46 @@
 import React, { Component } from 'react'
 import { connect } from "react-redux";
-import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
+import Media from 'react-bootstrap/Media'
+import Card from 'react-bootstrap/Card'
+import Button from 'react-bootstrap/Button'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 
 class RandomPet extends Component {
   render() { 
     const pet = this.props.pet.petsReducer;
     if (pet.photos !== undefined) {
       return (
-  <>
-        <div>
-          <h1>{pet.name}</h1>  
-            <img src={pet.photos[0].medium} alt="" />          
-        </div>
-        <div className="row">
-          <div className="six columns"><a className="button" href={pet.url}>Visit me on Petfinder!</a></div>
-         
-        </div>
-        <div className="row">
-          
-          <div className="six columns"><a className="button" href={pet.url}>Share me!</a></div>
-        </div>
-</>
-
+    <Container>
+      <Row className="justify-content-md-center">
+        <Col md="auto">
+          <Card border="dark" style={{ width: '25rem'}} alignment='center'>
+            <Card.Img variant="top" src={pet.photos[0].medium} />
+            <Card.Body>
+              <Card.Title>{pet.name}</Card.Title>
+              <Card.Text>
+                Blah Blah Blah
+              </Card.Text>
+              <Button variant="primary">Go somewhere</Button><br/>
+              <Button variant="primary">Go somewhere</Button>
+            </Card.Body>
+          </Card>
+        </Col>
+      </Row>
+    </Container>
         )
     }
     if (pet.photos === undefined) {
         return (
-          <img src="https://66.media.tumblr.com/tumblr_lztjlvnBoa1qcay1ao1_500.gif" alt=""/>
+  <Media>
+  <img
+    width={300}
+    // height={64}
+    className="mr-3"
+    src="https://66.media.tumblr.com/tumblr_lztjlvnBoa1qcay1ao1_500.gif"
+    alt="Generic placeholder"
+  /></Media>
         );
     } 
   }
