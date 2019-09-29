@@ -5,6 +5,7 @@ import RandomPet from './components/RandomPet'
 import SendPet from './components/SendPet'
 import './App.css';
 import { fetchRandomPet } from "./redux/actions/pets";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends React.Component {
   componentDidMount() {
