@@ -9,7 +9,7 @@ class PetContainer extends React.Component {
     return (
       <div>
         <h1>Pets List</h1>
-        something
+        will have pet cards.
       </div>
     );
   }
