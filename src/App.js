@@ -17,10 +17,12 @@ class App extends React.Component {
     return (
       <div className="App">
         <Router>
-          <NavBar />
-          <Route exact path="/" component={RandomPet} />
-          <Route exact path="/pets" component={PetContainer} />
-          <Route path="/about" component={About} /> 
+          <div>
+            <NavBar />
+            <Route exact path="/" component={RandomPet} />
+            <Route exact path="/pets" component={PetContainer} />
+            <Route path="/about" component={About} /> 
+          </div>
         </Router>
       </div>
     );
