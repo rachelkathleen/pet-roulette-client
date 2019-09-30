@@ -1,5 +1,13 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-const About = () => <h1>About Page</h1>;
+export default class About extends Component {
+    render() {
+        return (
+          <div style={{marginTop: '100px'}}>
+            <h1>blank space</h1>
+            about page
+          </div>
+        );
+      }
+}
 
-export default About;
