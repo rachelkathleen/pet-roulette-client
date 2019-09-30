@@ -6,6 +6,7 @@ import Button from 'react-bootstrap/Button'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import ModalButton from './ModalButton'
 
 class RandomPet extends Component {
   render() { 
@@ -24,6 +25,7 @@ class RandomPet extends Component {
               </Card.Text>
               <Button variant="primary">Go somewhere</Button><br/>
               <Button variant="primary">Go somewhere</Button>
+              <ModalButton />
             </Card.Body>
           </Card>
         </Col>
