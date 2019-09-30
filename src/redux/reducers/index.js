@@ -3,6 +3,6 @@ import petReducer from './petReducer';
 import formReducer from './formReducer';
 
 export default combineReducers({
-  petsReducer: petReducer,
+  petReducer: petReducer,
   formsReducers: formReducer
 });
