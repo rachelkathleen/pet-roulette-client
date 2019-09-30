@@ -1,8 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
-// import { BrowserRouter as Router, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import RandomPet from './components/RandomPet'
-import SendPet from './components/SendPet'
+import PetContainer from './containers/PetContainer'
+import About from './components/About'
 import './App.css';
 import { fetchRandomPet } from "./redux/actions/pets";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -14,8 +16,12 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-       <RandomPet />
-       <SendPet />
+        <Router>
+          <Navbar />
+          <Route exact path="/" component={RandomPet} />
+          <Route exact path="/pets" component={PetContainer} />
+          <Route exact path="/about" component={About} /> 
+        </Router>
       </div>
     );
   }
