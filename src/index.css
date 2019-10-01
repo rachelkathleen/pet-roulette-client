@@ -17,7 +17,8 @@ code {
 .nav {
   font-family: 'Monoton', cursive;
   font-weight: 500;
-  font-size: xx-large
+  font-size: xx-large;
+  letter-spacing: 0.3em;
   
 }
 
