@@ -1,43 +1,91 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
-import { sendEmail } from "../redux/actions/pets";
- 
+import { createPet } from "../redux/actions/pets";
+import Col from 'react-bootstrap/Col'
+import Form from 'react-bootstrap/Form'
+import FormControl from 'react-bootstrap/FormControl'
+
 class SendPet extends Component { 
+
+  state = {
+    sender_email: '',
+    sender_name: '',
+    recipien_email: '',
+    recipient_name: '',
+    message: ''
+};
+
+handleChange = event => {
+  this.setState({
+    [event.target.name]: event.target.value
+  });
+};
      
 handleSubmit = event => {
     event.preventDefault();
-    //need code to send email
+    this.props.createPet(this.state);
   };
 
   render() {
     return(
-      <div>
-        <form onSubmit={ event => this.handleSubmit(event) }>
-          <p>
-            <label>Your Name:</label>
-            <input type="text"/>
-          </p>
-          <p>
-            <label>Your Email:</label>
-            <input type="text"/>
-          </p>
-          <p>
-            <label>Friend's Name:</label>
-            <input type="text"/>
-          </p>
-          <p>
-            <label>Friend's Email</label>
-            <input type="text"/>
-          </p>
-          <p> 
-            <label>Message</label>
-            <input type="textarea"/>
-          </p>
-          <input type="submit" />
-        </form>
-      </div>
+      <Form onSubmit={this.handleSubmit}>
+        <Form.Row>
+          <Col>
+            <Form.Label>Your Name</Form.Label>
+            <Form.Control 
+              type="text"
+              onChange={this.handleChange} 
+              name="sender_name" 
+              value={this.state.sender_name}
+            />
+          </Col>
+          <Col>
+            <Form.Label>Your Email</Form.Label>
+            <Form.Control 
+              type="email"
+              onChange={this.handleChange} 
+              name="sender_email" 
+              value={this.state.sender_email}
+            />
+          </Col>
+        </Form.Row>
+        <Form.Row>
+          <Col>
+            <Form.Label>Friend's Name</Form.Label>
+            <Form.Control 
+              type="text"
+              onChange={this.handleChange} 
+              name="recipient_name" 
+              value={this.state.recipient_name}
+            />
+          </Col>
+          <Col>
+            <Form.Label>Friend's Email</Form.Label>
+            <Form.Control 
+              type="email"
+              onChange={this.handleChange} 
+              name="recipient_email" 
+              value={this.state.recipient_email}
+            />
+          </Col>
+        </Form.Row>
+        <Form.Group>
+          <Form.Label>Message</Form.Label>
+          <Form.Control 
+            as="textarea" 
+            rows="3"
+            onChange={this.handleChange}
+            name="message" 
+            value={this.state.message}/>
+        </Form.Group>
+          <input 
+            className="button-primary"
+            type="submit"
+            value="submit"
+          />
+      </Form>
     );
   }
 };
 
-export default connect(null, { sendEmail })(SendPet);
+export default connect(null, { createPet })(SendPet);
