@@ -9,7 +9,6 @@ import About from './components/About'
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-
 class App extends React.Component {
   componentDidMount() {
     this.props.fetchRandomPet();
