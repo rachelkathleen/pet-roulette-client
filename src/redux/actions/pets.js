@@ -35,9 +35,9 @@ export const getPets = () => {
   };
 };
 
-export const sendEmail = petEmail => {
+export const sendEmail = petEmail => { debugger
   const emailToSend = { email: petEmail };
-  return dispatch => {
+  return dispatch => { debugger
     fetch(`http://localhost:3001/pets`, {
       method: "POST",
       headers: {
