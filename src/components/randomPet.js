@@ -5,9 +5,7 @@ import Card from 'react-bootstrap/Card'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import Button from 'react-bootstrap/Button'
-import SendPet from './SendPet'
-
+import MyModal from './MyModal'
 
 class RandomPet extends Component {
 
@@ -20,10 +18,9 @@ class RandomPet extends Component {
     const loading = this.props.loading;
     if (loading) {
         return (
-          <Container style={{marginTop: '25px', marginBottom: '150px'}}>
-            <SendPet />
+          <Container style={{marginTop: '25px', paddingBottom: '150px'}}>
               <Row className="justify-content-md-center">
-                <Col md="auto">
+                <Col md="auto" style={{ width: '30rem'}}>
                   <Card border="dark" style={{ width: '25rem'}}>
                     <Card.Img 
                       className="mr-3"
@@ -46,7 +43,7 @@ class RandomPet extends Component {
     return (
     <Container style={{marginTop: '25px'}}>
       <Row className="justify-content-md-center">
-        <Col md="auto">
+        <Col md="auto" style={{ width: '30rem'}}>
           <Card border="dark" style={{ width: '30rem'}}>
             <Card.Img 
               variant="top" 
@@ -54,8 +51,15 @@ class RandomPet extends Component {
               />
             <Card.Body>
               <Card.Title>{pet.name}</Card.Title>
-              <button onClick={ event => this.shufflePet(event) }>Shuffle!</button><br/>
-              <button><a href={pet.url}>Visit me on Petfinder!</a></button>
+              <Row>
+                <Col><button className="button-primary" onClick={ event => this.shufflePet(event) }>Shuffle!</button><br/></Col>
+              </Row>
+              <Row style={{marginTop: '20px'}}>
+                <Col><button className="button-primary"><a href={pet.url}>Visit me on Petfinder!</a></button></Col>
+              </Row>
+              <Row style={{marginTop: '20px'}}>
+                <Col><MyModal /></Col>
+              </Row>
             </Card.Body>
           </Card>
         </Col>
