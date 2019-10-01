@@ -6,6 +6,7 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import MyModal from './MyModal'
+import { MDBContainer } from 'mdbreact'
 
 class RandomPet extends Component {
 
@@ -18,12 +19,11 @@ class RandomPet extends Component {
     const loading = this.props.loading;
     if (loading) {
         return (
-          <Container style={{marginTop: '25px', paddingBottom: '150px'}}>
+          <Container style={{marginTop: '25px'}} className='w-50 p-3 h-auto d-inline-block'>
               <Row className="justify-content-md-center">
-                <Col md="auto" style={{ width: '30rem'}}>
+                <Col md='auto' style={{ width: '30rem'}}>
                   <Card border="dark" style={{ width: '25rem'}}>
-                    <Card.Img 
-                      className="mr-3"
+                    <Card.Img
                       src="https://66.media.tumblr.com/tumblr_lztjlvnBoa1qcay1ao1_500.gif"
                       alt=""
                     />
@@ -41,25 +41,39 @@ class RandomPet extends Component {
     const pet = this.props.pet;
  
     return (
-    <Container style={{marginTop: '25px'}}>
+    <Container style={{margin: '25px'}} className='w-50 p-3 h-auto d-inline-block'>
       <Row className="justify-content-md-center">
         <Col md="auto" style={{ width: '30rem'}}>
-          <Card border="dark" style={{ width: '30rem'}}>
-            <Card.Img 
+          <Card border="dark" bg="light" style={{ width: '30rem'}}>
+            <Card.Img
               variant="top" 
               src={pet.photos[0].full}
               />
             <Card.Body>
               <Card.Title>{pet.name}</Card.Title>
-              <Row>
-                <Col><button className="button-primary" onClick={ event => this.shufflePet(event) }>Shuffle!</button><br/></Col>
-              </Row>
-              <Row style={{marginTop: '20px'}}>
-                <Col><button className="button-primary"><a href={pet.url}>Visit me on Petfinder!</a></button></Col>
-              </Row>
-              <Row style={{marginTop: '20px'}}>
-                <Col><MyModal /></Col>
-              </Row>
+              <div style={{backgroundColor: "white", padding: '25px'}}>
+                <Row>
+                  <Col>
+                    <button 
+                      className="button-primary" 
+                      onClick={ event => this.shufflePet(event) }>
+                      Shuffle!
+                    </button>
+                  </Col>
+                </Row>
+                <Row style={{marginTop: '20px'}}>
+                  <Col>
+                    <button 
+                      className="button-primary">
+                      <a style={{ color: 'white' }} 
+                      href={pet.url}>Visit me on Petfinder!</a>
+                    </button>
+                  </Col>
+                </Row>
+                <Row style={{marginTop: '20px'}}>
+                  <Col><MyModal /></Col>
+                </Row>
+              </div>
             </Card.Body>
           </Card>
         </Col>
