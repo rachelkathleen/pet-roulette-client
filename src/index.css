@@ -21,6 +21,27 @@ code {
   
 }
 
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #201D32;
+  color: white;
+  text-align: center;
+  /* padding-bottom: 5px; */
+  justify-content: space-around;
+  display: inline-block;
+}
+
+footer a {
+  padding: 15px;
+  color: white
+}
+footer a:hover {
+  color: white
+}
+
 /* Buttons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .button,
