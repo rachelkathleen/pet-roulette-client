@@ -35,21 +35,21 @@ export const getPets = () => {
   };
 };
 
-export const sendEmail = petEmail => { debugger
-  const emailToSend = { email: petEmail };
-  return dispatch => { debugger
+export const createPet = petObject => { 
+  const petToCreate = { pet: petObject };
+  return dispatch => {
     fetch(`http://localhost:3001/pets`, {
       method: "POST",
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json"
       },
-      body: JSON.stringify(emailToSend)
+      body: JSON.stringify(petToCreate)
     })
       .then(res => res.json())
       .then(pet =>
         dispatch({
-          type: "SEND_PET",
+          type: "PET_CREATE_SUCCESS",
           payload: pet
         })
       );
