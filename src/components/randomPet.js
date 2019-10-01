@@ -1,26 +1,27 @@
 import React, { Component } from 'react'
 import { connect } from "react-redux";
 import { fetchRandomPet } from "../redux/actions/pets";
-import Media from 'react-bootstrap/Media'
 import Card from 'react-bootstrap/Card'
-import Button from 'react-bootstrap/Button'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import ModalButton from './ModalButton';
+import Button from 'react-bootstrap/Button'
+import SendPet from './SendPet'
+
 
 class RandomPet extends Component {
 
-  shufflePet = event => {
+  shufflePet = event => { 
     event.preventDefault();
     this.props.fetchRandomPet();
   };
-  
+
   render() { 
-  const loading = this.props.loading;
+    const loading = this.props.loading;
     if (loading) {
         return (
-          <Container style={{marginTop: '100px'}}>
+          <Container style={{marginTop: '25px', marginBottom: '150px'}}>
+            <SendPet />
               <Row className="justify-content-md-center">
                 <Col md="auto">
                   <Card border="dark" style={{ width: '25rem'}}>
@@ -43,10 +44,10 @@ class RandomPet extends Component {
     const pet = this.props.pet;
  
     return (
-    <Container style={{marginTop: '100px'}}>
+    <Container style={{marginTop: '25px'}}>
       <Row className="justify-content-md-center">
         <Col md="auto">
-          <Card border="dark" style={{ width: '25rem'}}>
+          <Card border="dark" style={{ width: '30rem'}}>
             <Card.Img 
               variant="top" 
               src={pet.photos[0].full}
@@ -55,7 +56,6 @@ class RandomPet extends Component {
               <Card.Title>{pet.name}</Card.Title>
               <button onClick={ event => this.shufflePet(event) }>Shuffle!</button><br/>
               <button><a href={pet.url}>Visit me on Petfinder!</a></button>
-              <ModalButton />
             </Card.Body>
           </Card>
         </Col>
