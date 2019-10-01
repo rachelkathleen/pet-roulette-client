@@ -34,7 +34,7 @@ class MyModal extends Component {
  
   afterOpenModal() {
     // references are now sync'd and can be accessed.
-    this.subtitle.style.color = 'cyan';
+    // this.subtitle.style.color = 'cyan';
   }
  
   closeModal() {
@@ -52,10 +52,8 @@ class MyModal extends Component {
           style={customStyles}
           contentLabel="Email Form"
         >
- 
-          <h2 ref={subtitle => this.subtitle = subtitle}>Hello</h2>
-          <button className="button-primary" onClick={this.closeModal}>close</button>
           <SendPet />
+          <button className="button-primary" onClick={this.closeModal}>close</button>
         </Modal>
       </div>
     );
