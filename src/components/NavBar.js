@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function NavBar() {
     return (
-      <Navbar fixed="top" bg="dark" variant="dark">
+      <Navbar sticky="top" bg="dark" variant="dark">
         <Navbar.Brand className="nav" href="/">Pet Roulette!</Navbar.Brand>
            
       </Navbar>
