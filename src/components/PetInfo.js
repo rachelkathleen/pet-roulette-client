@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { fetchRandomPet } from "../redux/actions/pets";
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import MyModal from './MyModal'
+import EmailForm from './EmailForm'
 
 
 class PetInfo extends Component {
@@ -25,7 +25,7 @@ class PetInfo extends Component {
                     </button>
                   </Col>
                   <Col>
-                    <MyModal />
+                    <EmailForm />
                   </Col>
                 </Row>
               </div>
