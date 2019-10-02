@@ -52,7 +52,7 @@ class MyModal extends Component {
           style={customStyles}
           contentLabel="Email Form"
         >
-          <SendPet />
+          <SendPet closeModal={this.closeModal}/>
           <button className="button-primary" onClick={this.closeModal}>close</button>
         </Modal>
       </div>
