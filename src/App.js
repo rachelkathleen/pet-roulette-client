@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { fetchRandomPet } from "./redux/actions/pets";
 import NavBar from "./components/NavBar";
-import RandomPet from './containers/RandomPet'
+import RandomPet from './containers/DisplayPet'
 import PetContainer from './containers/PetContainer'
 import About from './components/About'
 import './App.css';
