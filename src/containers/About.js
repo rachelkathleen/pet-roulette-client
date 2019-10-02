@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Container from 'react-bootstrap/Container'
-import ContactForm from './ContactForm'
+import ContactForm from '../components/ContactForm'
 
 export default class About extends Component {
     render() {

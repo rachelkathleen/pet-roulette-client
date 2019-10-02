@@ -5,7 +5,7 @@ import { fetchRandomPet } from "./redux/actions/pets";
 import NavBar from "./components/NavBar";
 import RandomPet from './containers/DisplayPet'
 import PetContainer from './containers/PetContainer'
-import About from './components/About'
+import About from './containers/About'
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
