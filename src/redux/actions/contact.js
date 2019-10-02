@@ -1,7 +1,7 @@
-export const sendEmail = (emailObject, history) => {
+export const sendEmail = emailObject => {
     const emailToSend = { email: emailObject };
-    return dispatch => {
-      fetch(`http://localhost:3001/emails`, {
+    return dispatch => { debugger
+      fetch(`http://localhost:3001/contacts`, {
         method: "POST",
         headers: {
           Accept: "application/json",
