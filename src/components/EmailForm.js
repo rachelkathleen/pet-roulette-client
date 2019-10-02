@@ -15,7 +15,7 @@ const customStyles = {
 
 Modal.setAppElement('#root')
  
-class MyModal extends Component {
+class EmailForm extends Component {
   constructor(props) {
     super(props);
  
@@ -63,4 +63,4 @@ class MyModal extends Component {
 }
 
 
-export default MyModal;
+export default EmailForm;
