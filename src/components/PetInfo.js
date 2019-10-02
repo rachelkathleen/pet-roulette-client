@@ -17,7 +17,7 @@ class PetInfo extends Component {
   render() { 
     const pet = this.props.pet;
     return (
-            <Card.Body>
+            <>
               <Card.Title>{pet.name}</Card.Title>
               <div style={{backgroundColor: "white", padding: '25px'}}>
                 <Row>
@@ -42,7 +42,7 @@ class PetInfo extends Component {
                   <Col><MyModal /></Col>
                 </Row>
               </div>
-            </Card.Body>
+            </>
         )
     }
 
