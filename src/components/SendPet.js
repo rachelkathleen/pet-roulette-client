@@ -30,7 +30,7 @@ handleSubmit = event => {
 
   render() {
     return(
-      <Form onSubmit={this.handleSubmit}>
+      <Form onSubmit={this.handleSubmit} style={{fontSize:'15px', textAlign:'left'}}>
         <Form.Row>
           <Col>
             <Form.Label>Your Name</Form.Label>
