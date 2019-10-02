@@ -21,13 +21,6 @@ code {
   letter-spacing: 0.3em;
 }
 
-.navlink {
-  display: flex;
-  /* align-items: right; */
-  /* justify-content: space-around; */
-  float: right;
-}
-
 
 
 .nav a {
