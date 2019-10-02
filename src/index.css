@@ -19,8 +19,43 @@ code {
   font-weight: 500;
   font-size: xx-large;
   letter-spacing: 0.3em;
-  
 }
+
+.nav a {
+  color: white
+}
+
+.nav a:hover {
+  color: white }
+
+.navlink a {
+  color: grey
+}
+
+.navlink a:hover {
+  color: grey; }
+
+.reframe {
+  object-fit: cover;
+}
+
+/* .reframe {
+    width: 500px;
+    height: 400px;
+    overflow: hidden;
+    /* margin: 10px; 
+    position: relative;
+} */
+/* img {
+    
+    margin: auto; 
+    max-height: 100%;
+    max-width: 100%;
+    left: -100%;
+    right: -100%;
+    top: -100%;
+    bottom: -100%; 
+} */
 
 .footer {
   position: fixed;
