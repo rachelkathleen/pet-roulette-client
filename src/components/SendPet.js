@@ -90,10 +90,10 @@ handleSubmit = event => {
   }
 };
 
-const mapStateToProps = state => { 
-    return { 
-      pet: state.petReducer.pet,
-    };
+const mapStateToProps = state => { 
+    return { 
+      pet: state.petReducer.pet,
+    };
   };
 
 export default withRouter(connect(mapStateToProps, { createPet })(SendPet));
