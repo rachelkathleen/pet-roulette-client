@@ -19,17 +19,16 @@ class ContactForm extends Component {
       });
     };
          
-    handleSubmit = event => {
+    handleSubmit = event => { debugger
         event.preventDefault();
-        const { contact } = this.props
-        let newState = {...this.state, email: contact.email, name: contact.name, message: contact.message}
-        this.props.sendEmail(newState);
+        const contact = this.state
+        sendEmail(contact);
       };
 
     render() {
         return (
             <div>
-                <Form style={{fontSize:'15px', textAlign:'left'}}>
+                <Form onSubmit={this.handleSubmit} style={{fontSize:'15px', textAlign:'left'}}>
                     <Row>
                     <Col>
                     <Form.Group>
@@ -65,13 +64,18 @@ class ContactForm extends Component {
                           value={this.state.message}
                         />
                     </Form.Group>
+                    <input 
+                      className="button-primary"
+                      type="submit"
+                      value="submit"
+                    />
                     </Form>
             </div>
         )
     }
 }
 
-const mapStateToProps = state => { 
+const mapStateToProps = state => {
       return { 
         email: state.formReducer.email,
       };
