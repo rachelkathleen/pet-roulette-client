@@ -44,7 +44,7 @@ class MyModal extends Component {
   render() {
     return (
       <div>
-        <button className="button-primary" onClick={this.openModal}>Share me with a friend!</button>
+        <button className="button-primary" onClick={this.openModal}>Share me!</button>
         <Modal
           isOpen={this.state.modalIsOpen}
           onAfterOpen={this.afterOpenModal}
