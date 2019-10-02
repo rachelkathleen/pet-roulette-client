@@ -5,12 +5,8 @@ import { fetchRandomPet } from "../redux/actions/pets";
 import PetInfo from './PetInfo'
 
 class CardImage extends Component {
-    shufflePet = event => { 
-      event.preventDefault();
-      this.props.fetchRandomPet();
-    };
 
-  render() { 
+  render() {
     const loading = this.props.loading;
     const pet = this.props.pet;
     if (loading) {
@@ -31,14 +27,17 @@ class CardImage extends Component {
             className='reframe'
             src={pet.photos[0].full}
           />
-          <PetInfo /> 
-        </>
+          <Card.Body>
+            <PetInfo /> 
+          </Card.Body>
+          </> 
       )
     } 
 }
 
 const mapStateToProps = state => { 
   return { 
+    pet: state.petReducer.pet,
     loading: state.petReducer.loading
   };
 };
