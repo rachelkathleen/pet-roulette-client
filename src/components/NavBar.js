@@ -6,10 +6,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 export default function NavBar() {
     return (
       <Navbar sticky="top" bg="dark" variant="dark" >
-        <Navbar.Brand className="nav" href="/">Pet Roulette!</Navbar.Brand>
-        <Nav className="navbar-nav text-right">
-          <Nav.Link href="/about">ABOUT</Nav.Link>
-          <Nav.Link href="/pets">PETS</Nav.Link>
+        <Navbar.Brand className="nav"><Link to="/">Pet Roulette!</Link></Navbar.Brand>
+        <Nav className="navlink">
+          <Nav.Link ><Link to="/about">ABOUT</Link></Nav.Link>
+          <Nav.Link><Link to="/Pets">PETS</Link></Nav.Link>
         </Nav>
       </Navbar>
     )
