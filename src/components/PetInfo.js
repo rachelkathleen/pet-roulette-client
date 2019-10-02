@@ -19,7 +19,7 @@ class PetInfo extends Component {
     return (
             <>
               <Card.Title>{pet.name}</Card.Title>
-              <div style={{backgroundColor: "white", padding: '15px'}}>
+              <div style={{backgroundColor: "white"}}>
                 <Row>
                   <Col>
                     <button 
@@ -29,7 +29,7 @@ class PetInfo extends Component {
                     </button>
                   </Col>
                 </Row>
-                <Row style={{marginTop: '10px'}}>
+                <Row style={{marginTop: '5px'}}>
                   <Col>
                     <button 
                       className="button-primary">
@@ -38,7 +38,7 @@ class PetInfo extends Component {
                     </button>
                   </Col>
                 </Row>
-                <Row style={{marginTop: '10px'}}>
+                <Row style={{marginTop: '5px'}}>
                   <Col><MyModal /></Col>
                 </Row>
               </div>
