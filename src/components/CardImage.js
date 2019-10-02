@@ -25,7 +25,7 @@ class CardImage extends Component {
         <>
           <Card.Img
             className='reframe'
-            src={pet.photos[0].full}
+            src={pet.photos[0].medium}
           />
           <Card.Body>
             <PetInfo /> 
