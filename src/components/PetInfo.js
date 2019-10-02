@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from "react-redux";
 import { fetchRandomPet } from "../redux/actions/pets";
-import Card from 'react-bootstrap/Card'
-import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import MyModal from './MyModal'
@@ -15,10 +13,8 @@ class PetInfo extends Component {
   };
 
   render() { 
-    const pet = this.props.pet;
     return (
             <>
-              <Card.Title>{pet.name}</Card.Title>
               <div style={{backgroundColor: "white"}}>
                 <Row>
                   <Col>
@@ -28,18 +24,9 @@ class PetInfo extends Component {
                       Shuffle!
                     </button>
                   </Col>
-                </Row>
-                <Row style={{marginTop: '5px'}}>
                   <Col>
-                    <button 
-                      className="button-primary">
-                      <a style={{ color: 'white' }} 
-                      href={pet.url}>Visit me on Petfinder!</a>
-                    </button>
+                    <MyModal />
                   </Col>
-                </Row>
-                <Row style={{marginTop: '5px'}}>
-                  <Col><MyModal /></Col>
                 </Row>
               </div>
             </>

@@ -4,7 +4,6 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import CardImage from '../components/CardImage'
-import PetInfo from '../components/PetInfo'
 
 class DisplayPet extends Component {
 
@@ -22,12 +21,5 @@ class DisplayPet extends Component {
       );
     } 
  }
-
-const mapStateToProps = state => { 
-  return { 
-    pet: state.petReducer.pet,
-    loading: state.petReducer.loading
-  };
-};
 
 export default DisplayPet;
