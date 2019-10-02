@@ -23,10 +23,13 @@ class CardImage extends Component {
  
     return (
         <>
-          <Card.Img
-            className='reframe'
-            src={pet.photos[0].medium}
-          />
+          <a 
+            href={pet.url}>
+            <Card.Img
+              className='reframe'
+              src={pet.photos[0].medium}
+            />
+          </a>
           <Card.Body>
             <PetInfo /> 
           </Card.Body>
