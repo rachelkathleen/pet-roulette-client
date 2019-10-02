@@ -3,14 +3,14 @@ import { connect } from 'react-redux';
 import { createPet } from "../redux/actions/pets";
 import Col from 'react-bootstrap/Col'
 import Form from 'react-bootstrap/Form'
-import FormControl from 'react-bootstrap/FormControl'
+import { withRouter } from 'react-router-dom'
 
 class SendPet extends Component { 
 
   state = {
     sender_email: '',
     sender_name: '',
-    recipien_email: '',
+    recipient_email: '',
     recipient_name: '',
     message: ''
 };
@@ -23,7 +23,9 @@ handleChange = event => {
      
 handleSubmit = event => {
     event.preventDefault();
-    this.props.createPet(this.state);
+    const { pet } = this.props
+    let newState = {...this.state, photo: pet.photos[0].medium, name: pet.name, url: pet.url}
+    this.props.createPet(newState, this.props.closeModal);
   };
 
   render() {
@@ -88,4 +90,10 @@ handleSubmit = event => {
   }
 };
 
-export default connect(null, { createPet })(SendPet);
+const mapStateToProps = state => { 
+    return { 
+      pet: state.petReducer.pet,
+    };
+  };
+
+export default withRouter(connect(mapStateToProps, { createPet })(SendPet));
