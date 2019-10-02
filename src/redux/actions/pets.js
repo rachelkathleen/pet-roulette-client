@@ -35,7 +35,7 @@ export const getPets = () => {
   };
 };
 
-export const createPet = petObject => { 
+export const createPet = (petObject, closeModal) => {
   const petToCreate = { pet: petObject };
   return dispatch => {
     fetch(`http://localhost:3001/pets`, {
@@ -48,10 +48,11 @@ export const createPet = petObject => {
     })
       .then(res => res.json())
       .then(pet =>
-        dispatch({
+        {dispatch({
           type: "PET_CREATE_SUCCESS",
           payload: pet
         })
+        closeModal()}
       );
   };
 };
