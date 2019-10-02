@@ -10,7 +10,7 @@ class DisplayPet extends Component {
 
   render() { 
    return (
-    <Container style={{marginTop: '25px'}} className='w-50 p-3 h-auto d-inline-block'>
+    <Container style={{marginTop: '25px'}}>
       <Row className="justify-content-md-center">
         <Col md='auto' style={{ width: '30rem'}}>
           <Card border="dark" style={{ width: '25rem'}} className='reframe'>
