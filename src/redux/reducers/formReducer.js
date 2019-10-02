@@ -1,11 +1,10 @@
 export default (state = 
   { 
-    emails: []
+    email: {}
     }, action) => {
   switch(action.type) {
-    case "SEND_PET":
-      debugger
-      return action.payload;
+    case "CONTACT_SUCCESS":
+      return state;
     default:
       return state;
     }

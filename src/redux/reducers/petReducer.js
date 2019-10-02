@@ -18,7 +18,6 @@ export default (state =
       case "PET_CREATE_SUCCESS":
         return {
           ...state, 
-        //what to return
       };
     default:
       return state;
