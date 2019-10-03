@@ -20,14 +20,14 @@ export const fetchRandomPet = () => {
   };
 };
 
-const fetchPets = pets => {
+const fetchPets = pets => { 
   return {
     type: "FETCH_PETS_SUCCESS",
     pets
   };
 };
 
-export const getPets = () => {
+export const getPets = () => { 
   return dispatch => {
     return fetch(`http://localhost:3001/pets`)
       .then(res => res.json())

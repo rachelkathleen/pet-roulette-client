@@ -1,6 +1,6 @@
 export const sendEmail = emailObject => {
     const emailToSend = { email: emailObject };
-    return dispatch => { debugger
+    return dispatch => { 
       fetch(`http://localhost:3001/contacts`, {
         method: "POST",
         headers: {
