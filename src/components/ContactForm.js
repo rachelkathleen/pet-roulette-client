@@ -19,7 +19,7 @@ class ContactForm extends Component {
       });
     };
          
-    handleSubmit = event => { debugger
+    handleSubmit = event => { 
         event.preventDefault();
         const contact = this.state
         sendEmail(contact);
