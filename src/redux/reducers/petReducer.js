@@ -1,5 +1,6 @@
 export default (state = 
   {
+    all: [],
     loading: true, 
     pet: {photos: []}
     }, action) => {
@@ -19,6 +20,9 @@ export default (state =
         return {
           ...state, 
       };
+      case "FETCH_PETS_SUCCESS":
+        return { ...state, all: action.pets 
+        };
     default:
       return state;
   }
