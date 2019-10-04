@@ -1,11 +1,15 @@
-export default (state = 
-  { 
+export default (
+  state = {
     email: {}
-    }, action) => {
-  switch(action.type) {
+  },
+  action
+) => {
+  switch (action.type) {
     case "CONTACT_SUCCESS":
       return state;
     default:
-      return state;
-    }
+      return (state = {
+        email: {}
+      });
   }
+};

@@ -1,4 +1,4 @@
-export const sendEmail = emailObject => {
+export const sendEmail = (emailObject, history) => {
   return dispatch => {
     fetch(`http://localhost:3001/contacts`, {
       method: "POST",
@@ -9,11 +9,12 @@ export const sendEmail = emailObject => {
       body: JSON.stringify(emailObject)
     })
       .then(res => res.json())
-      .then(email =>
+      .then(email => {
         dispatch({
           type: "CONTACT_SUCCESS",
           payload: email
-        })
-      );
+        });
+        //something with history?
+      });
   };
 };
