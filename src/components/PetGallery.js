@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import moment from "moment";
 
 class PetGallery extends Component {
   render() {
@@ -8,7 +9,12 @@ class PetGallery extends Component {
       return <p>Loading...</p>;
     }
 
-    const pet = this.props.pets.reverse().map(p => {
+    const today = moment().endOf("day");
+    const week = today.subtract(1, "w");
+    const petsThisWeek = this.props.pets.filter(
+      p => week < moment(p.created_at)
+    );
+    const pet = petsThisWeek.reverse().map(p => {
       return (
         <>
           <div
