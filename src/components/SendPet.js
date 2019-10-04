@@ -21,14 +21,14 @@ class SendPet extends Component {
   };
 
   handleSubmit = event => {
-    debugger;
     event.preventDefault();
     const { pet } = this.props;
     let newState = {
       ...this.state,
       photo: pet.photos[0].medium,
       name: pet.name,
-      url: pet.url
+      url: pet.url,
+      species: pet.type
     };
     this.props.fetchRandomPet();
     this.props.createPet(newState, this.props.closeModal);
