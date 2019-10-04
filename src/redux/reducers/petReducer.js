@@ -1,30 +1,30 @@
-export default (state = 
-  {
+export default (
+  state = {
     all: [],
-    loading: true, 
-    pet: {photos: []}
-    }, action) => {
-  switch (action.type) { 
+    loading: true,
+    pet: { photos: [] }
+  },
+  action
+) => {
+  switch (action.type) {
     case "RANDOM_PET_SUCCESS":
       return {
-        ...state, 
+        ...state,
         loading: false,
-        pet: action.pet 
-      }; 
+        pet: action.pet
+      };
     case "LOADING_PET":
       return {
         ...state,
         loading: true
       };
-      case "PET_CREATE_SUCCESS":
-        return {
-          ...state, 
+    case "PET_CREATE_SUCCESS":
+      return {
+        ...state
       };
-      case "FETCH_PETS_SUCCESS":
-        return { ...state, all: action.pets 
-        };
+    case "FETCH_PETS_SUCCESS":
+      return { ...state, all: action.pets };
     default:
       return state;
   }
 };
-
