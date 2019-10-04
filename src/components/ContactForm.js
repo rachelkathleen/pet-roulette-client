@@ -21,6 +21,7 @@ class ContactForm extends Component {
   handleSubmit = event => {
     event.preventDefault();
     const contact = this.state;
+    // const history = this.props.history;
     this.props.sendEmail(contact);
   };
 
