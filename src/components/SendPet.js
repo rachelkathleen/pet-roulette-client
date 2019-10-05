@@ -4,6 +4,8 @@ import { createPet, fetchRandomPet } from "../redux/actions/pets";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import { withRouter } from "react-router-dom";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 class SendPet extends Component {
   state = {
@@ -13,6 +15,8 @@ class SendPet extends Component {
     recipient_name: "",
     message: ""
   };
+
+  petNotify = () => toast("Successfully sent, yayy!!", { containerId: "pet" });
 
   handleChange = event => {
     this.setState({
@@ -30,6 +34,7 @@ class SendPet extends Component {
       url: pet.url,
       species: pet.type
     };
+    this.petNotify();
     this.props.fetchRandomPet();
     this.props.createPet(newState, this.props.closeModal);
   };

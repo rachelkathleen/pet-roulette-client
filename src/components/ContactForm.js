@@ -4,6 +4,8 @@ import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import { sendEmail } from "../redux/actions/contact";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 class ContactForm extends Component {
   state = {
@@ -11,6 +13,9 @@ class ContactForm extends Component {
     name: "",
     message: ""
   };
+
+  contactNotify = () =>
+    toast("Thank you for your message!", { containerId: "contact" });
 
   handleChange = event => {
     this.setState({
@@ -21,8 +26,8 @@ class ContactForm extends Component {
   handleSubmit = event => {
     event.preventDefault();
     const contact = this.state;
-    // const history = this.props.history;
     this.props.sendEmail(contact);
+    this.contactNotify();
   };
 
   render() {
@@ -72,16 +77,15 @@ class ContactForm extends Component {
           </Form.Group>
           <input className="button-primary" type="submit" value="submit" />
         </Form>
+        <ToastContainer
+          enableMultiContainer
+          containerId={"contact"}
+          position={toast.POSITION.BOTTOM_LEFT}
+        />
       </div>
     );
   }
 }
-
-// const mapStateToProps = state => {
-//   return {
-//     email: state.formReducer.email
-//   };
-// };
 
 export default connect(
   null,
