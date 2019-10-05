@@ -9,12 +9,13 @@ export default function NavBar() {
       <Navbar.Brand className="nav">
         <Link to="/">Pet Roulette!</Link>
       </Navbar.Brand>
-      <Nav className="navlink justify-content-end">
+
+      <Nav className="ml-auto navlink">
         <Nav.Link>
-          <Link to="/about">ABOUT</Link>
+          <Link to="/pets">GALLERY&emsp;</Link>
         </Nav.Link>
         <Nav.Link>
-          <Link to="/Pets">PETS</Link>
+          <Link to="/about">ABOUT&emsp;</Link>
         </Nav.Link>
       </Nav>
     </Navbar>
