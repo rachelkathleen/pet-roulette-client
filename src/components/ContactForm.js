@@ -41,6 +41,7 @@ class ContactForm extends Component {
                   onChange={this.handleChange}
                   name="name"
                   value={this.state.name}
+                  required
                 />
               </Form.Group>
             </Col>
@@ -53,6 +54,7 @@ class ContactForm extends Component {
                   onChange={this.handleChange}
                   name="email"
                   value={this.state.email}
+                  required
                 />
               </Form.Group>
             </Col>
@@ -65,6 +67,7 @@ class ContactForm extends Component {
               onChange={this.handleChange}
               name="message"
               value={this.state.message}
+              required
             />
           </Form.Group>
           <input className="button-primary" type="submit" value="submit" />

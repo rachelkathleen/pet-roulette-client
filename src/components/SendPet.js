@@ -48,6 +48,7 @@ class SendPet extends Component {
               onChange={this.handleChange}
               name="sender_name"
               value={this.state.sender_name}
+              required
             />
           </Col>
           <Col>
@@ -57,6 +58,7 @@ class SendPet extends Component {
               onChange={this.handleChange}
               name="sender_email"
               value={this.state.sender_email}
+              required
             />
           </Col>
         </Form.Row>
@@ -68,6 +70,7 @@ class SendPet extends Component {
               onChange={this.handleChange}
               name="recipient_name"
               value={this.state.recipient_name}
+              required
             />
           </Col>
           <Col>
@@ -77,6 +80,7 @@ class SendPet extends Component {
               onChange={this.handleChange}
               name="recipient_email"
               value={this.state.recipient_email}
+              required
             />
           </Col>
         </Form.Row>
