@@ -35,7 +35,7 @@ class PetGallery extends Component {
       );
     });
     return (
-      <div className="row" style={{ margin: 5, alignContent: "center" }}>
+      <div className="row" style={{ margin: 5 }}>
         {pet}
       </div>
     );
