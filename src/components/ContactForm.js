@@ -28,6 +28,15 @@ class ContactForm extends Component {
     const contact = this.state;
     this.props.sendEmail(contact);
     this.contactNotify();
+    this.clearForm();
+  };
+
+  clearForm = () => {
+    this.setState({
+      email: "",
+      name: "",
+      message: ""
+    });
   };
 
   render() {
