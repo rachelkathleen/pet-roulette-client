@@ -1,6 +1,6 @@
 export const sendEmail = (emailObject, history) => {
   return dispatch => {
-    fetch(`http://localhost:3001/contacts`, {
+    fetch(`https://pet-roulette-api.herokuapp.com/contacts`, {
       method: "POST",
       headers: {
         Accept: "application/json",

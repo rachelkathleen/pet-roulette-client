@@ -41,7 +41,7 @@ export const getPets = () => {
 export const createPet = (petObject, closeModal) => {
   const petToCreate = { pet: petObject };
   return dispatch => {
-    fetch(`http://localhost:3001/pets`, {
+    fetch(`https://pet-roulette-api.herokuapp.com/pets`, {
       method: "POST",
       headers: {
         Accept: "application/json",
