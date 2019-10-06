@@ -3,13 +3,39 @@
   <head>
     <meta charset="utf-8" />
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
-    <link href="https://fonts.googleapis.com/css?family=Monoton&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Monoton&display=swap"
+      rel="stylesheet"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
+    <meta name="Pet Roulette!" />
+    <meta property="og:url" content="www.rachel-hawa.com" />
+    <meta property="og:title" content="A pet from Pet Roulette!" />
     <meta
-      name="description"
-      content="Web site created using create-react-app"
+      property="og:description"
+      content="React web application made as the final project for the Flatiron School."
     />
+    <meta
+      property="og:image"
+      content="https://i.ibb.co/5RwBQXZ/PET-ROULETTE.png"
+    />
+    <meta property="fb:app_id" content="514935305969263" />
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script>
+      (function(d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src =
+          "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+        fjs.parentNode.insertBefore(js, fjs);
+      })(document, "script", "facebook-jssdk");
+    </script>
+
     <link rel="apple-touch-icon" href="logo192.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
