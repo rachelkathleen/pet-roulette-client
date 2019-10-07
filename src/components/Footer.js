@@ -1,17 +1,23 @@
-import React from 'react'
+import React from "react";
 import { Nav, Navbar, NavItem } from "react-bootstrap";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function Footer() {
-    return (
-      <Navbar fixed="bottom" bg="dark" variant="dark">
-        <Navbar.Brand className="nav" href="/">footer</Navbar.Brand>
-        <a href="https://medium.com/@rachel.hawa" target="blank"> <FontAwesomeIcon icon={faCoffee} /></a>
-      </Navbar>
-    )
+  return (
+    <footer className="footer">
+      <a href="https://github.com/rachelkathleen" target="blank">
+        {" "}
+        <i className="fab fa-github fa-lg"></i>
+      </a>
+
+      <a href="https://medium.com/@rachel.hawa" target="blank">
+        {" "}
+        <i className="fab fa-medium fa-lg"></i>
+      </a>
+
+      <a href="https://www.linkedin.com/in/rachelhawa/" target="blank">
+        <i className="fab fa-linkedin fa-lg"></i>
+      </a>
+    </footer>
+  );
 }
-
-
-

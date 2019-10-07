@@ -6,6 +6,7 @@ import NavBar from "./components/NavBar";
 import RandomPet from "./containers/DisplayPet";
 import PetsContainer from "./containers/PetsContainer";
 import About from "./containers/About";
+import Footer from "./components/Footer";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -24,6 +25,7 @@ class App extends React.Component {
             <Route exact path="/pets" component={PetsContainer} />
             <Route exact path="/about" component={About} />
           </div>
+          <Footer />
         </Router>
       </div>
     );

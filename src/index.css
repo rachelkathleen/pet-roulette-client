@@ -15,27 +15,27 @@ code {
 }
 
 .nav {
-  font-family: 'Monoton', cursive;
+  font-family: "Monoton", cursive;
   font-weight: 500;
   font-size: xx-large;
   letter-spacing: 0.3em;
 }
 
-
-
 .nav a {
-  color: white
+  color: white;
 }
 
 .nav a:hover {
-  color: white }
+  color: white;
+}
 
 .navlink a {
-  color: grey
+  color: grey;
 }
 
 .navlink a:hover {
-  color: grey; }
+  color: grey;
+}
 
 .reframe {
   object-fit: cover;
@@ -59,25 +59,27 @@ code {
     bottom: -100%; 
 } */
 
+i {
+  opacity: 0.6;
+}
+
 .footer {
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: #201D32;
+  background-color: #212121;
   color: white;
-  text-align: center;
-  /* padding-bottom: 5px; */
+  /* text-align: center; */
+  padding: 5px;
   justify-content: space-around;
   display: inline-block;
 }
 
 footer a {
   padding: 15px;
-  color: white
+  color: white;
 }
 footer a:hover {
-  color: white
+  color: white;
 }
-
-
