@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import moment from "moment";
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
 
 class DogVsCat extends Component {
   render() {
@@ -13,9 +15,22 @@ class DogVsCat extends Component {
 
     return (
       <div>
-        <p>
-          Number of Dogs: {dogs}, Number of Cats: {cats}
-        </p>
+        <h5>Pets Shared this Week</h5>
+
+        <Row className="justify-content-md-center">
+          <Col>
+            <span></span>
+          </Col>
+          <Col>
+            <span>Dogs: {dogs}</span>
+          </Col>
+          <Col>
+            <span>Cats: {cats}</span>
+          </Col>
+          <Col>
+            <span></span>
+          </Col>
+        </Row>
       </div>
     );
   }
