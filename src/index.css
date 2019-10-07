@@ -59,6 +59,19 @@ code {
     bottom: -100%; 
 } */
 
+.navbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: #212121;
+  /* color: white; */
+  /* text-align: center; */
+  padding: 5px;
+  justify-content: space-around;
+  display: inline-block;
+}
+
 i {
   opacity: 0.6;
 }
