@@ -4,7 +4,7 @@ import { Nav, Navbar } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const NavBar = () => (
-  <Navbar sticky="top" bg="dark" variant="dark" className="navbar">
+  <Navbar sticky="top" bg="dark" variant="dark">
     <Navbar.Brand className="nav">
       <Link to="/">Pet Roulette!</Link>
     </Navbar.Brand>
