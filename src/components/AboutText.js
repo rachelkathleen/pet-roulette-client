@@ -10,19 +10,19 @@ const About = () => (
     </p>
     <p>
       It was made with a <a href="">Ruby on Rails</a> backend, and a&nbsp;
-      <a href="https://github.com/rachelkathleen/pet-roulette-client">
+      <a href="https://github.com/rachelkathleen/pet-roulette-api">
         React/Redux
       </a>
       &nbsp;front-end.
     </p>
     <p>
-      It includes data obtained from the{" "}
-      <a href="https://www.petfinder.com/developers/v2/docs/">Petfiner API</a>,
-      is hosted on <a href="heroku.com"></a> and uses{" "}
+      Pet Roulette! consumes the the{" "}
+      <a href="https://www.petfinder.com/developers/v2/docs/">Petfinder API</a>{" "}
+      and uses{" "}
       <a href="https://guides.rubyonrails.org/action_mailer_basics.html">
         Rails Action Mailer
-      </a>
-      .
+      </a>{" "}
+      for contact form and sharing feature.
     </p>
   </>
 );
