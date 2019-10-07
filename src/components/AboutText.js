@@ -4,7 +4,7 @@ const About = () => (
   <>
     <p>
       Pet Roulette! is the final portfolio project by{" "}
-      <a href="www.rachel-hawa.com">Rachel Hawa</a>&nbsp; for the{" "}
+      <a href="http://www.rachel-hawa.com/">Rachel Hawa</a>&nbsp; for the{" "}
       <a href="https://flatironschool.com">Flatiron School</a> &nbsp;software
       engineering immersive.
     </p>
