@@ -32,7 +32,7 @@ const fetchPets = pets => {
 
 export const getPets = () => {
   return dispatch => {
-    return fetch(`http://localhost:3001/pets`)
+    return fetch(`https://pet-roulette-api.herokuapp.com/pets`)
       .then(res => res.json())
       .then(pets => dispatch(fetchPets(pets)));
   };

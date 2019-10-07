@@ -1,4 +1,4 @@
-export const sendEmail = (emailObject, history) => {
+export const sendEmail = emailObject => {
   return dispatch => {
     fetch(`https://pet-roulette-api.herokuapp.com/contacts`, {
       method: "POST",
@@ -14,7 +14,6 @@ export const sendEmail = (emailObject, history) => {
           type: "CONTACT_SUCCESS",
           payload: email
         });
-        //something with history?
       });
   };
 };
