@@ -59,8 +59,9 @@ code {
     bottom: -100%; 
 } */
 
-.navbar {
+.navlink {
   width: 100%;
+  background-color: #212121;
 }
 
 i {
