@@ -9,7 +9,7 @@ import { ToastContainer, toast } from "react-toastify";
 class DisplayPet extends Component {
   render() {
     return (
-      <Container style={{ alignContent: "center", padding: "4em" }}>
+      <Container style={{ alignContent: "center", padding: "3em" }}>
         <ToastContainer
           enableMultiContainer
           containerId={"pet"}
