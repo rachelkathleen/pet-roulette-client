@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "mdbreact/dist/css/mdb.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import store from "./redux";
 import { Provider } from "react-redux";
-import "mdbreact/dist/css/mdb.css";
 
 ReactDOM.render(
   <Provider store={store}>

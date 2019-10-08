@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Row from "react-bootstrap/Row";
-import "bootstrap/dist/css/bootstrap.min.css";
 import "./navandfooter.css";
 
 const NavBar = () => (
