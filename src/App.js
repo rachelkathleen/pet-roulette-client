@@ -7,8 +7,9 @@ import RandomPet from "./containers/DisplayPet";
 import PetsContainer from "./containers/PetsContainer";
 import About from "./containers/About";
 import Footer from "./components/Footer";
-import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+import "./index.css";
 
 class App extends React.Component {
   componentDidMount() {
