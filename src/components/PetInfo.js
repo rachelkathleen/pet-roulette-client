@@ -4,6 +4,7 @@ import { fetchRandomPet } from "../redux/actions/pets";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import EmailForm from "./EmailForm";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 class PetInfo extends Component {
   shufflePet = event => {
