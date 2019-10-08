@@ -21,15 +21,17 @@ class PetGallery extends Component {
             className="card"
             style={{ width: 15 + "rem", padding: 10, margin: 10 }}
           >
-            <img
-              className="card-img-top"
-              style={{ maxWidth: 14 + "rem", maxHeight: 14 + "rem" }}
-              src={
-                p.photo
-                  ? p.photo
-                  : "https://i.ibb.co/YyGLcqn/Screen-Shot-2019-10-02-at-10-09-23-PM.png"
-              }
-            />
+            <a href={p.url} target="blank">
+              <img
+                className="card-img-top"
+                style={{ maxWidth: 14 + "rem", maxHeight: 14 + "rem" }}
+                src={
+                  p.photo
+                    ? p.photo
+                    : "https://i.ibb.co/YyGLcqn/Screen-Shot-2019-10-02-at-10-09-23-PM.png"
+                }
+              />
+            </a>
           </div>
         </>
       );
