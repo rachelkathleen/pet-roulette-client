@@ -1,4 +1,5 @@
 import React from "react";
+import "./navandfooter.css";
 
 const Footer = () => (
   <footer className="footer">

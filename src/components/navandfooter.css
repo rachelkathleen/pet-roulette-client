@@ -1,0 +1,63 @@
+.nav {
+  font-family: "Monoton", cursive;
+  font-weight: 500;
+  font-size: xx-large;
+  letter-spacing: 0.3em;
+  color: white;
+}
+
+.nav:hover {
+  color: white;
+}
+
+.navlink {
+  padding: 10px;
+}
+.navlink {
+  color: grey;
+}
+
+.navlink:hover {
+  color: grey;
+}
+
+i {
+  opacity: 0.6;
+}
+
+.topnav {
+  z-index: 9999;
+  position: sticky;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: #212121;
+}
+
+.row {
+  justify-content: space-around;
+  text-align: center;
+  display: inline-block;
+  flex-wrap: wrap;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #212121;
+  color: white;
+  /* text-align: center; */
+  padding: 8px;
+  justify-content: space-around;
+  display: inline-block;
+}
+
+footer a {
+  padding: 15px;
+  color: white;
+}
+footer a:hover {
+  color: white;
+}
