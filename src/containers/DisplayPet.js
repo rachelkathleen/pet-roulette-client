@@ -16,9 +16,11 @@ class DisplayPet extends Component {
           position={toast.POSITION.TOP_RIGHT}
         />
         <Row className="justify-content-md-center">
-          <Col md="auto" style={{ width: "30rem" }}>
-            <Card border="dark" style={{ width: "25rem" }} className="reframe">
-              <CardImage />
+          <Col md="auto">
+            <Card style={{ width: "20em" }}>
+              <div style={{ width: "20em", height: "16em" }}>
+                <CardImage />
+              </div>
             </Card>
           </Col>
         </Row>
