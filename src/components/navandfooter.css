@@ -37,7 +37,13 @@ i {
 .row {
   justify-content: space-around;
   text-align: center;
+  /* display: inline-block; */
+  /* flex-wrap: wrap; */
+}
+
+.a {
   display: inline-block;
+  font-family: "Raleway" sans-serif;
   flex-wrap: wrap;
 }
 
