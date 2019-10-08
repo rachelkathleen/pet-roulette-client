@@ -26,9 +26,8 @@ i {
 }
 
 .topnav {
-  z-index: 9999;
+  /* z-index: 9999; */
   position: sticky;
-
   right: 0;
   top: 0;
   width: 100%;
