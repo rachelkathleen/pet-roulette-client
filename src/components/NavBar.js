@@ -1,23 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Nav, Navbar } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
+import Row from "react-bootstrap/Row";
 
 const NavBar = () => (
-  <Navbar sticky="top" bg="dark" variant="dark">
-    <Navbar.Brand className="nav">
-      <Link to="/">Pet Roulette!</Link>
-    </Navbar.Brand>
-
-    <Nav className="ml-auto navlink">
-      <Nav.Link>
-        <Link to="/pets">GALLERY&emsp;</Link>
-      </Nav.Link>
-      <Nav.Link>
-        <Link to="/about">ABOUT&emsp;</Link>
-      </Nav.Link>
-    </Nav>
-  </Navbar>
+  <nav className="topnav">
+    <Row className="row">
+      <Link className="navlink" to="/pets">
+        GALLERY
+      </Link>
+      <Link className="nav" to="/">
+        Pet Roulette!
+      </Link>
+      <Link className="navlink" to="/about">
+        ABOUT
+      </Link>
+    </Row>
+  </nav>
 );
 
 export default NavBar;

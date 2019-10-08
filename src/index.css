@@ -19,21 +19,21 @@ code {
   font-weight: 500;
   font-size: xx-large;
   letter-spacing: 0.3em;
-}
-
-.nav a {
   color: white;
 }
 
-.nav a:hover {
+.nav:hover {
   color: white;
 }
 
-.navlink a {
+.navlink {
+  padding: 10px;
+}
+.navlink {
   color: grey;
 }
 
-.navlink a:hover {
+.navlink:hover {
   color: grey;
 }
 
@@ -63,6 +63,22 @@ i {
   opacity: 0.6;
 }
 
+.topnav {
+  z-index: 9999;
+  position: sticky;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: #212121;
+}
+
+.row {
+  justify-content: space-around;
+  text-align: center;
+  display: inline-block;
+  flex-wrap: wrap;
+}
+
 .footer {
   position: fixed;
   left: 0;
@@ -71,7 +87,7 @@ i {
   background-color: #212121;
   color: white;
   /* text-align: center; */
-  padding: 5px;
+  padding: 8px;
   justify-content: space-around;
   display: inline-block;
 }
