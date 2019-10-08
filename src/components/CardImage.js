@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import Card from "react-bootstrap/Card";
 import { fetchRandomPet } from "../redux/actions/pets";
 import PetInfo from "./PetInfo";
+import FittedImage from "react-fitted-image";
 
 class CardImage extends Component {
   render() {
@@ -11,10 +12,9 @@ class CardImage extends Component {
     if (loading) {
       return (
         <>
-          <Card.Img
-            className="reframe"
+          <FittedImage
+            fit="contain"
             src="https://66.media.tumblr.com/tumblr_lztjlvnBoa1qcay1ao1_500.gif"
-            alt=""
           />
         </>
       );
@@ -22,7 +22,7 @@ class CardImage extends Component {
     return (
       <>
         <a href={pet.url}>
-          <Card.Img className="reframe" src={pet.photos[0].medium} />
+          <FittedImage fit="contain" src={pet.photos[0].medium} />
         </a>
         <Card.Body>
           <PetInfo />
