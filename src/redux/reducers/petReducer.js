@@ -21,7 +21,7 @@ export default (
     case "PET_CREATE_SUCCESS":
       return {
         ...state,
-        pets: [...state.all, action.payload]
+        pets: state.all.push(action.payload)
       };
     case "FETCH_PETS_SUCCESS":
       return { ...state, all: action.pets };
