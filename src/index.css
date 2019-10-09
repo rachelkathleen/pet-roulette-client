@@ -27,6 +27,13 @@ code {
   box-sizing: border-box;
   /* z-index: -1; */
 }
+.toastcontainer {
+  z-index: 90;
+}
+
+.modal {
+  z-index: 90;
+}
 .column,
 .columns {
   width: 100%;
