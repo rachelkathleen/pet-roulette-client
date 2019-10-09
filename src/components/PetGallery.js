@@ -30,6 +30,7 @@ class PetGallery extends Component {
                     ? p.photo
                     : "https://i.ibb.co/YyGLcqn/Screen-Shot-2019-10-02-at-10-09-23-PM.png"
                 }
+                alt=""
               />
             </a>
           </div>
