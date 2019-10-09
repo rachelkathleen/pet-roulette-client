@@ -9,8 +9,12 @@ const About = () => (
       engineering immersive.
     </p>
     <p>
-      It was made with a <a href="">Ruby on Rails</a> backend, and a&nbsp;
+      It was made with a{" "}
       <a href="https://github.com/rachelkathleen/pet-roulette-api">
+        Ruby on Rails
+      </a>{" "}
+      backend, and a&nbsp;
+      <a href="https://github.com/rachelkathleen/pet-roulette-client">
         React/Redux
       </a>
       &nbsp;front-end.
