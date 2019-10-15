@@ -8,6 +8,19 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 class SendPet extends Component {
+  // instead of having functions as arrow fucntions:
+  // constructor(props){
+  //   super(props)
+  //   this.state = {
+  //     sender_email: "",
+  //     sender_name: "",
+  //     recipient_email: "",
+  //     recipient_name: "",
+  //     message: ""
+  //   };
+  //   this.handleChange = this.handleChange.bind(this)
+  // }
+
   state = {
     sender_email: "",
     sender_name: "",
