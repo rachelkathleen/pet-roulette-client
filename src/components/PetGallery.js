@@ -2,27 +2,34 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import moment from "moment";
 
+import FittedImage from "react-fitted-image";
+
 class PetGallery extends Component {
   render() {
-    const loading = this.props.loading;
-    if (loading) {
-      return <p>Loading...</p>;
-    }
-
     const today = moment().endOf("day");
-    const week = today.subtract(1, "w");
+    const week = today.subtract(3, "w");
     const petsThisWeek = this.props.pets.filter(
       p => week < moment(p.created_at)
     );
     const pet = petsThisWeek.reverse().map(p => {
       return (
-        <>
+        <div
+          key={p.id}
+          className="card"
+          style={{
+            padding: 5,
+            margin: 5
+          }}
+        >
           <div
-            className="card"
-            style={{ width: 15 + "rem", padding: 10, margin: 10 }}
+            style={{
+              width: 15 + "rem",
+              height: 15 + "rem"
+            }}
           >
             <a href={p.url} target="blank">
-              <img
+              <FittedImage
+                fit="contain"
                 className="card-img-top"
                 style={{ maxWidth: 14 + "rem", maxHeight: 14 + "rem" }}
                 src={
@@ -34,7 +41,7 @@ class PetGallery extends Component {
               />
             </a>
           </div>
-        </>
+        </div>
       );
     });
     return (

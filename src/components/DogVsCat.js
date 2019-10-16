@@ -8,7 +8,7 @@ class DogVsCat extends Component {
   render() {
     const pets = this.props.pets;
     const today = moment().endOf("day");
-    const week = today.subtract(1, "w");
+    const week = today.subtract(3, "w");
     const petsThisWeek = pets.filter(p => week < moment(p.created_at));
     const dogs = petsThisWeek.filter(pet => pet.species === "Dog").length;
     const cats = petsThisWeek.filter(pet => pet.species === "Cat").length;
