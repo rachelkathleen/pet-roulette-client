@@ -1,35 +1,16 @@
 import React, { Component } from "react";
-import { connect } from "react-redux";
-import moment from "moment";
-
-import FittedImage from "react-fitted-image";
 
 class PetGallery extends Component {
   render() {
-    const today = moment().endOf("day");
-    const week = today.subtract(3, "w");
-    const petsThisWeek = this.props.pets.filter(
-      p => week < moment(p.created_at)
-    );
-    const pet = petsThisWeek.reverse().map(p => {
+    const pet = this.props.petsToShow.map(p => {
       return (
-        <div
-          key={p.id}
-          className="card"
-          style={{
-            padding: 5,
-            margin: 5
-          }}
-        >
+        <div key={p.id}>
           <div
-            style={{
-              width: 15 + "rem",
-              height: 15 + "rem"
-            }}
+            className="card"
+            style={{ width: 15 + "rem", padding: 10, margin: 10 }}
           >
             <a href={p.url} target="blank">
-              <FittedImage
-                fit="contain"
+              <img
                 className="card-img-top"
                 style={{ maxWidth: 14 + "rem", maxHeight: 14 + "rem" }}
                 src={
@@ -52,10 +33,4 @@ class PetGallery extends Component {
   }
 }
 
-const mapStateToProps = state => {
-  return {
-    pets: state.petReducer.all
-  };
-};
-
-export default connect(mapStateToProps)(PetGallery);
+export default PetGallery;
