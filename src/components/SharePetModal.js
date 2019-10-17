@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Modal from "react-modal";
-import SendPet from "./SendPet";
+import SharePetForm from "./SharePetForm";
 
 const customStyles = {
   content: {
@@ -15,7 +15,7 @@ const customStyles = {
 
 Modal.setAppElement("#root");
 
-class EmailForm extends Component {
+class SharePetModal extends Component {
   constructor(props) {
     super(props);
 
@@ -61,11 +61,11 @@ class EmailForm extends Component {
           >
             <span aria-hidden="true">&times;</span>
           </button>
-          <SendPet closeModal={this.closeModal} />
+          <SharePetForm closeModal={this.closeModal} />
         </Modal>
       </div>
     );
   }
 }
 
-export default EmailForm;
+export default SharePetModal;
