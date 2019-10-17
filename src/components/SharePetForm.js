@@ -7,7 +7,7 @@ import { withRouter } from "react-router-dom";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-class SendPet extends Component {
+class SharePetForm extends Component {
   // instead of having functions as arrow fucntions:
   // constructor(props){
   //   super(props)
@@ -128,5 +128,5 @@ export default withRouter(
   connect(
     mapStateToProps,
     { createPet, fetchRandomPet }
-  )(SendPet)
+  )(SharePetForm)
 );
