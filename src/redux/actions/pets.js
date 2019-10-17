@@ -59,3 +59,23 @@ export const createPet = (petObject, closeModal) => {
       });
   };
 };
+
+export const addHeartToPet = (petObject, id, history) => {
+  const petToUpdate = { pet: petObject };
+
+  return dispatch => {
+    return fetch(`http://localhost:3001/pets/${id}`, {
+      method: "PATCH",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(petToUpdate)
+    })
+      .then(res => res.json())
+      .then(updatedPet => {
+        dispatch({ type: "ADD_LIKE_SUCCESS", payload: updatedPet });
+        history.push(`/pets`);
+      });
+  };
+};
