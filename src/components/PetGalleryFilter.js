@@ -4,8 +4,6 @@ import Row from "react-bootstrap/Row";
 
 const PetGalleryFilter = props => (
   <div>
-    <h5>Shared Pets!</h5>
-
     <Row className="justify-content-md-center">
       <Col>
         <span></span>
