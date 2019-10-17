@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import FittedImage from "react-fitted-image";
+import HeartButton from "./HeartButton";
 
 class PetGallery extends Component {
   render() {
@@ -33,6 +34,7 @@ class PetGallery extends Component {
               />
             </a>
           </div>
+          <HeartButton id={p.id} />
         </div>
       );
     });
