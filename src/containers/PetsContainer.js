@@ -22,7 +22,7 @@ class PetsContainer extends Component {
   };
 
   render() {
-    const pets = this.props.pets.reverse();
+    const pets = this.props.pets;
     const dogs = pets.filter(pet => pet.species === "Dog");
     const cats = pets.filter(pet => pet.species === "Cat");
     let petsToShow = pets;
@@ -54,7 +54,7 @@ class PetsContainer extends Component {
 
 const mapStateToProps = state => {
   return {
-    pets: state.petReducer.all
+    pets: state.petReducer.all.reverse()
   };
 };
 
