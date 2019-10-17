@@ -34,7 +34,7 @@ class PetGallery extends Component {
               />
             </a>
           </div>
-          <HeartButton id={p.id} />
+          <HeartButton petId={p.id} />
         </div>
       );
     });

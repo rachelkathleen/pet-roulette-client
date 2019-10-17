@@ -2,7 +2,7 @@ export default (
   state = {
     all: [],
     loading: true,
-    pet: { photos: [] }
+    pet: { photos: [], likes: 0 }
   },
   action
 ) => {
@@ -26,6 +26,7 @@ export default (
     case "FETCH_PETS_SUCCESS":
       return { ...state, all: action.pets };
     case "ADD_LIKE_SUCCESS":
+      debugger;
       return {
         ...state,
         all: state.map(pet => {
