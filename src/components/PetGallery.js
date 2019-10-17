@@ -1,16 +1,27 @@
 import React, { Component } from "react";
+import FittedImage from "react-fitted-image";
 
 class PetGallery extends Component {
   render() {
     const pet = this.props.petsToShow.map(p => {
       return (
-        <div key={p.id}>
+        <div
+          key={p.id}
+          className="card"
+          style={{
+            padding: 5,
+            margin: 5
+          }}
+        >
           <div
-            className="card"
-            style={{ width: 15 + "rem", padding: 10, margin: 10 }}
+            style={{
+              width: 15 + "rem",
+              height: 15 + "rem"
+            }}
           >
             <a href={p.url} target="blank">
-              <img
+              <FittedImage
+                fit="contain"
                 className="card-img-top"
                 style={{ maxWidth: 14 + "rem", maxHeight: 14 + "rem" }}
                 src={
