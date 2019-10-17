@@ -15,7 +15,7 @@ const PetGalleryFilter = props => (
       </Col>
       <Col>
         <button className="button-primary" onClick={props.allPetsState}>
-          All: {props.pets.length}
+          All Pets!
         </button>
       </Col>
       <Col>
