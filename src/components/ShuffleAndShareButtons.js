@@ -3,9 +3,9 @@ import { connect } from "react-redux";
 import { fetchRandomPet } from "../redux/actions/pets";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import EmailForm from "./EmailForm";
+import SharePetModal from "./SharePetModal";
 
-class PetInfo extends Component {
+class ShuffleAndShareButtons extends Component {
   shufflePet = event => {
     event.preventDefault();
     this.props.fetchRandomPet();
@@ -25,7 +25,7 @@ class PetInfo extends Component {
               </button>
             </Col>
             <Col>
-              <EmailForm shufflePet={this.shufflePet} />
+              <SharePetModal shufflePet={this.shufflePet} />
             </Col>
           </Row>
         </div>
@@ -43,4 +43,4 @@ const mapStateToProps = state => {
 export default connect(
   mapStateToProps,
   { fetchRandomPet }
-)(PetInfo);
+)(ShuffleAndShareButtons);
