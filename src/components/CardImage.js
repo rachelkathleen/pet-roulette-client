@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import Card from "react-bootstrap/Card";
 import { fetchRandomPet } from "../redux/actions/pets";
-import PetInfo from "./PetInfo";
+import ShuffleAndShareButtons from "./ShuffleAndShareButtons";
 import FittedImage from "react-fitted-image";
 
 class CardImage extends Component {
@@ -25,7 +25,7 @@ class CardImage extends Component {
           <FittedImage fit="contain" src={pet.photos[0].medium} />
         </a>
         <Card.Body>
-          <PetInfo />
+          <ShuffleAndShareButtons />
         </Card.Body>
       </>
     );
