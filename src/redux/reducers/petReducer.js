@@ -25,6 +25,17 @@ export default (
       };
     case "FETCH_PETS_SUCCESS":
       return { ...state, all: action.pets };
+    case "ADD_LIKE_SUCCESS":
+      return {
+        ...state,
+        all: state.map(pet => {
+          if (pet.id === action.payload.id) {
+            return action.payload;
+          } else {
+            return pet;
+          }
+        })
+      };
     default:
       return state;
   }
