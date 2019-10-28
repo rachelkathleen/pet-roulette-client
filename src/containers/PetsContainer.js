@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import PetGalleryFilter from "../components/PetGalleryFilter";
 import PetGallery from "../components/PetGallery";
 import Container from "react-bootstrap/Container";
+import GalleryLoading from "../components/GalleryLoading";
 
 class PetsContainer extends Component {
   state = {
@@ -23,6 +24,11 @@ class PetsContainer extends Component {
 
   render() {
     const pets = this.props.pets;
+    debugger;
+
+    if (pets.length === 0) {
+      return <GalleryLoading />;
+    }
     const dogs = pets.filter(pet => pet.species === "Dog");
     const cats = pets.filter(pet => pet.species === "Cat");
     let petsToShow = pets;
@@ -35,9 +41,9 @@ class PetsContainer extends Component {
     if (this.state.petsToDisplay === "dogs") {
       petsToShow = dogs;
     }
-
     return (
       <Container style={{ alignContent: "center", padding: "2em" }}>
+                
         <PetGalleryFilter
           pets={pets}
           dogs={dogs}
@@ -46,7 +52,9 @@ class PetsContainer extends Component {
           catState={this.catState}
           allPetsState={this.allPetsState}
         />
+           
         <PetGallery petsToShow={petsToShow} dogs={dogs} cats={cats} />
+              
       </Container>
     );
   }
@@ -54,7 +62,8 @@ class PetsContainer extends Component {
 
 const mapStateToProps = state => {
   return {
-    pets: state.petReducer.all.reverse()
+    pets: state.petReducer.all.reverse(),
+    loading: true
   };
 };
 
