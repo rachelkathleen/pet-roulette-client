@@ -13,6 +13,4 @@
                  <div className={color} onClick={this.changeState}>
                     <div className="text">{text}</div>
                     <div className="circle"> </div>
-                </div>
-              </div>
-         
+     
