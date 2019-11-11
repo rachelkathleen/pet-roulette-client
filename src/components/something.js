@@ -18,8 +18,5 @@
             ) 
           } 
         } 
-    
-    ReactDOM.render(
-        <Toggle true="hi" false="bye" />, document.getElementById('root') );
-    </script>
+
 </body>
