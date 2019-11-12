@@ -9,15 +9,15 @@ class HeartButton extends Component {
 
   addLike = () => {
     let newCount = this.state.likes + 1;
-    // this.setState({
-    //   likes: newCount
-    // });
-    let newState = {
-      ...this.state,
+    this.setState({
       likes: newCount
-    };
-    debugger;
-    this.props.addHeartToPet(newState, this.props.pet.id, this.props);
+    });
+    // let newState = {
+    //   ...this.state,
+    //   likes: newCount
+    // };
+    // debugger;
+    // this.props.addHeartToPet(newState, this.props.pet.id, this.props);
   };
 
   render() {
