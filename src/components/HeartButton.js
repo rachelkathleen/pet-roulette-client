@@ -66,9 +66,6 @@ const mapStateToProps = (state, props) => {
     pet
   };
 };
-export default connect(
-  mapStateToProps,
-  {
-    addHeartToPet
-  }
-)(HeartButton);
+export default connect(mapStateToProps, {
+  // addHeartToPet
+})(HeartButton);
